@@ -73,7 +73,7 @@ h2 {
 }
 
 
-.fb_Stats {
+.stats-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,35 +95,11 @@ h2 {
     margin: 0;
 }
 
-.twitter_Stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
 
-.insta_Stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
 
-.yt_Stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
+
+
+
 
 .stats {
     grid-area: middle;
