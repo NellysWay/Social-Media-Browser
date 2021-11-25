@@ -27,4 +27,8 @@ const stats = [
         username: 'Nathan F.',
         newFollowCount: '144 Today'
     }
-]
+];
+
+export function getStats() {
+    return stats;
+}
