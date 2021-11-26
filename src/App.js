@@ -1,7 +1,8 @@
-import react from "react";
+import React from "react";
 import StatCard from "./StatCard";
 import { getStats } from './stats';
 import './social.css';
+
 
 
 
@@ -23,7 +24,7 @@ const App = () => {
     return (
         <>
         <div>
-            <div className="stats-container">{renderStatCards}</div>
+            <div className="stats">{renderStatCards()}</div>
         </div>       
          </>
     );

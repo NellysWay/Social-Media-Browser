@@ -10,7 +10,7 @@ const StatCard = ({
 }) => {
     return (
         <div className="stats-card">
-            <p>{username}</p> <img src={siteLogo} alt={siteName} />
+            <p> <img src={siteLogo} alt={siteName} /> {username}</p>
 
             <h1 className="sub-count">{followers}</h1>
 
