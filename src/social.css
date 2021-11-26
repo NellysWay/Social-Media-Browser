@@ -106,58 +106,18 @@ h2 {
     
 }
 
-#updated_stats {
+.updated_stats {
     grid-area: bottom;    
 }
 
-.fb_Views {
+.analytic_View {
     background-color: hsl(228, 28%, 20%);
     width: 300px;
     margin-left: 25px;
     
 }
 
-.fb_Likes {
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
 
-.insta_Likes {
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
-
-.insta_Views {
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
-
-.twitter_Retweets {
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
-
-.twitter_Likes {
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
-
-.yt_Likes {
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
-
-.yt_Views {
-    background-color: hsl(228, 28%, 20%);
-    width: 300px;
-    margin-left: 25px;
-}
 
 
 
