@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import StatCard from "./StatCard";
 import { getStats } from './stats';
 import './social.css';
@@ -6,6 +6,8 @@ import { getTop } from "./topstats";
 import TopCard from "./TopStatCard";
 import { getViewStat } from "./viewstats";
 import ViewCard from "./ViewStatCard";
+import { ThemeContext } from "./ThemeContext";
+import SwitchButton from "./SwitchButton";
 
 
 
@@ -14,6 +16,8 @@ const App = () => {
     const stats = getStats(); // array of stats from stats.js
     const topstats = getTop(); // array of stats from topstats.js
     const viewstats = getViewStat(); // array of stats from viewstats.js
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
 
     const renderStatCards = () =>
         stats.map((stat) => (
@@ -45,9 +49,11 @@ const App = () => {
     return (
         <>
         
-        <div>
-            <div className="top_sec">{renderTopCard()}</div>
+        <div className={`body ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+            
+            <div className="top_sec">{renderTopCard()} </div> <SwitchButton />
             <div className="stats">{renderStatCards()}</div>
+            <h1 className="header"> Overview - Today </h1>
             <div className="updated_stats">{renderViewCards()}</div>
         </div>       
          </>

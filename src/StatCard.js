@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 const StatCard = ({
     //destructuring props
@@ -8,13 +9,16 @@ const StatCard = ({
     username,
     newFollowCount,
 }) => {
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
-        <div className="stats-card">
-            <p> <img src={siteLogo} alt={siteName} /> {username}</p>
+        <div className={`stats-card card-light ${darkMode ? 'card-dark' : 'card-light'}`}>
+            <p className={`text-light ${darkMode ? 'text-dark' : 'text-light'}`}> <img src={siteLogo} alt={siteName} /> {username}</p>
 
-            <h1 className="sub-count">{followers}</h1>
+            <h1 className={`sub-count num-light ${darkMode ? 'num-dark' : 'num-light'}`}>{followers}</h1>
 
-            <p className="follow-title">
+            <p className={`follow-title text-light ${darkMode ? 'text-dark' : 'text-light'}`}>
                 {siteName === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS'}
             </p>
 

@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+
 
 
 const TopCard = ({
     title,
     followers,
 }) => {
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
-     <section className="top_sec">
+     <section className={`bg-lightTop ${darkMode ? 'bg-darkTop' : 'bg-lightTop'}`}>
         <div className="title">
-         <h1>{title}</h1>
-        <p>{followers}</p>
+         <h1 className={`num-light ${darkMode ? 'num-dark' : 'num-light'}`}>{title}</h1>
+        <p className={`text-light ${darkMode ? 'text-dark' : 'text-light'}`}>{followers}</p>
          </div>
   
   
-         <p>Dark Mode <input type="checkbox" name="switch" id="switch"/>
-         <label for="switch"></label>
-         </p>
+         
 
     </section>
     );
