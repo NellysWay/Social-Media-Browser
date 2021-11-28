@@ -6,6 +6,7 @@ import { ThemeContext } from "./ThemeContext";
 const TopCard = ({
     title,
     followers,
+    mode,
 }) => {
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
@@ -25,7 +26,7 @@ const TopCard = ({
         <p className={`text-light ${darkMode ? 'text-dark' : 'text-light'}`}>{followers}</p>
          </div>
   
-         <p className={`text-light ${darkMode ? 'text-dark' : 'text-light'}`}>Dark Mode<input name="swtich" id="switch" type="checkbox" className={` btn-light ${darkMode ? 'btn-dark' : 'btn-light'}`} 
+         <p className={`text-light ${darkMode ? 'text-dark' : 'text-light'}`}>{mode}<input name="swtich" id="switch" type="checkbox"
     onClick={onClickHandler}/>
     <label for="switch"></label>
     </p>

@@ -37,6 +37,7 @@ const App = () => {
                 <TopCard
                 title={topstat.title}
                 followers={topstat.followers}
+                mode={topstat.mode}
                 />
             ));
 
