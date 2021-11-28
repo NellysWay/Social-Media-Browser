@@ -7,7 +7,7 @@ import TopCard from "./TopStatCard";
 import { getViewStat } from "./viewstats";
 import ViewCard from "./ViewStatCard";
 import { ThemeContext } from "./ThemeContext";
-import SwitchButton from "./SwitchButton";
+
 
 
 
@@ -51,9 +51,9 @@ const App = () => {
         
         <div className={`body ${darkMode ? 'bg-dark' : 'bg-light'}`}>
             
-            <div className="top_sec">{renderTopCard()} </div> <SwitchButton />
+            <div className="top_sec">{renderTopCard()} </div> 
             <div className="stats">{renderStatCards()}</div>
-            <h1 className="header"> Overview - Today </h1>
+            <h1 className= {`header ${darkMode ? 'num-dark' : 'num-light'}`}> Overview - Today </h1>
             <div className="updated_stats">{renderViewCards()}</div>
         </div>       
          </>
