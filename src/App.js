@@ -28,6 +28,8 @@ const App = () => {
             followers={stat.followers}
             username={stat.username}
             newFollowCount={stat.newFollowCount}
+            cardHeader={stat.cardHeader}
+            ratioLogo={stat.ratioLogo}
             />
         ));
     const renderTopCard = () =>
@@ -41,9 +43,12 @@ const App = () => {
     const renderViewCards = () =>
        viewstats.map((viewstat) => (
            <ViewCard
+           siteLogo={viewstat.siteLogo}
+           siteName={viewstat.siteName}
            analytics={viewstat.analytics}
            followers={viewstat.followers}
            ratio={viewstat.ratio}
+           ratioLogo={viewstat.ratioLogo}
            />
         ));
     return (

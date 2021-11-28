@@ -9,6 +9,7 @@ const StatCard = ({
     followers,
     username,
     newFollowCount,
+    ratioLogo,
 }) => {
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
@@ -25,7 +26,7 @@ const StatCard = ({
                 {siteName === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS'}
             </p>
 
-            <p>{newFollowCount}</p>
+            <p className={`num-light ${darkMode ? 'num-dark' : 'num-light'}`}> <img src= {ratioLogo} alt={siteLogo}/> {newFollowCount}</p>
         </div>
     
     );
