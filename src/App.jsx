@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import StatCard from "./StatCard";
-import { getStats } from './stats';
+import { getStats } from './Stats';
 import './social.css';
 import { getTop } from "./topstats";
 import TopCard from "./TopStatCard";
